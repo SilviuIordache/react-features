@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { AnimalDisplayer } from './AnimalDisplayer';
 import { CountDisplayer } from './CountDisplayer';
 import { MethodCaller } from './MethodCaller';
@@ -20,17 +20,18 @@ export const UseCallback = () => {
     setAnimal(animal === 'dog' ? 'cat' : 'dog');
   };
 
-  // const methodHandler = useCallback(() => {
-  //   console.log('methodHandler called');
-  // }, []);
 
-  const methodHandler = () => {
+  // const methodHandler = () => {
+  //   console.log('methodHandler called');
+  // };
+
+  const methodHandler = useCallback(() => {
     console.log('methodHandler called');
-  };
+  }, []);
 
   return (
     <div className="border-2 border-white-500 p-4">
-      {/* <RenderDisplayer showRerender={showRerender} /> */}
+      <RenderDisplayer showRerender={showRerender} />
       <h1 className="text-2xl font-bold mb-24">Parent Component</h1>
 
       <div className="mt-2 flex justify-center ">
@@ -59,7 +60,7 @@ export const UseCallback = () => {
           </div>
         </div>
 
-        <div className="text-green-500">{`const methodCaller = () => {...}`}</div>
+        <div className="text-green-500">{`const methodHandler = () => {...}`}</div>
       </div>
 
       <div className="grid grid-cols-3 gap-4 mt-6">

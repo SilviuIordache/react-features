@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-const Closure = () => {
+const ClosureReact = () => {
   const [count, setCount] = useState(0);
 
   const handleClick = useCallback(() => {
@@ -38,4 +38,4 @@ ChildComponent.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
-export { Closure };
+export { ClosureReact };
