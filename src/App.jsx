@@ -1,9 +1,10 @@
 import './App.css';
-import Uncontrolled from './ReactConcepts/Uncontrolled';
+import ReactAsyncRequest from './ReactConcepts/ReactAsyncRequest';
+
 function App() {
   return (
     <div>
-      <Uncontrolled />
+      <ReactAsyncRequest/>
     </div>
   );
 }

@@ -6,7 +6,7 @@ import useRenderIndicator from '../../hooks/useRenderIndicator';
 import { RenderDisplayer } from '../../hooks/RenderDisplayer';
 import { CustomButton } from '../../components/CustomButton';
 
-export const UseCallback = () => {
+const UseCallback = () => {
   const showRerender = useRenderIndicator();
 
   const [count, setCount] = useState(0);
@@ -20,7 +20,8 @@ export const UseCallback = () => {
     setAnimal(animal === 'dog' ? 'cat' : 'dog');
   };
 
-
+  // Uncomment this to see how the difference
+  
   // const methodHandler = () => {
   //   console.log('methodHandler called');
   // };
@@ -73,3 +74,5 @@ export const UseCallback = () => {
     </div>
   );
 };
+
+export default UseCallback;
